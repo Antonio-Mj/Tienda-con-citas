@@ -1,0 +1,36 @@
+
+#home-container{
+    margin-top: 10%;
+    display: flex;
+    text-align: center;
+}
+
+#home-container #buttons div{
+    margin-top:10%;
+}
+
+#images-redes img{
+    width: 30px;
+    margin-right: 10%;
+}
+#container-navbar{
+    background-color: pink;
+}
+.navbar-brand h2 {
+    color: #000000; 
+    padding-right: 70px; 
+}
+.navbar-nav .nav-link h4 {
+    color: #000000; 
+    padding-right: 140px; 
+}
+.container-res{
+    width: 100%;
+}
+.res-form{
+    width: 30%;
+}
+#calendar{
+    width: 40%;
+    margin: 1% 2% 0 10%;
+}

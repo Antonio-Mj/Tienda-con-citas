@@ -5,7 +5,7 @@
             <img src="images/home-logo.png" alt="">
            <div class="col-md-12" style="display: flex; margin-top: 10%;">
             <div class="col-md-6">
-                <a href="index.php?vista=fecha" type="button" class="btn btn-dark" style="padding: 2% 7%;">Catalogo</a>
+                <a href="index.php?vista=catalogo" type="button" class="btn btn-dark" style="padding: 2% 7%;">Catalogo</a>
             </div>
             <div class="col-md-6">
                 <button type="button" class="btn btn-dark" style="padding: 2% 7%;">Unetenos</button>

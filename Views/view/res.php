@@ -5,8 +5,9 @@
    
     <div id='calendar'></div>
     <div class="res-form">
-    <form action="Views/view/pago.php" method="post" >
+    <form action="index.php?vista=pago" method="post" >
           <div class="mb-3">
+          <div class="alert alert-danger" role="alert" id="alert-fecha" style="color:black;">Costo de cita: <b>$500</b></div>
             <input type="hidden" id="inputfecha">
             <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
             <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -63,6 +64,7 @@
       } else {
         console.log("La fecha está ocupada");
         document.getElementById('fecha').textContent = ''
+        document.getElementById('inputfecha').value = ''
         document.getElementById('inputfecha').value = ''
         document.getElementById('alert-fecha').style.display = 'block'
         document.getElementById('alert-fecha').textContent = "Elija otra fecha, esa esta ocupada"

@@ -8,7 +8,7 @@ $fecha = $_POST['fecha'];
 $costo = $_POST['costo'];
 $tipo = $_POST['tipo'];
 
-if($name != "" && $email != ""  && $telef != "" && $edad != "" && $fecha != "" && $costo != "") {
+if($name != "" && $email != ""  && $telef != "" && $edad != "" && $fecha != "" && $costo != ""  && $tipo != '') {
     $request = $conn->prepare("INSERT INTO `citas`(`name`, `email`, `phone`, `age`, `date`, `price`, `payment_type`)
                                             VALUES ('$name' , '$email' , '$telef' , '$edad' , '$fecha', '$costo', '$tipo')");
     if (!$request->execute()) {

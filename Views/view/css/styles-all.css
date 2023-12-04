@@ -19,6 +19,12 @@ body{
     width: 30px;
     margin-right: 10%;
 }
+
+#container-icon-navbar{
+    width: 90%;
+    margin: 10px auto;
+}
+
 #container-icon-navbar div a{
     color: black;
     display: flex;
@@ -26,7 +32,7 @@ body{
 }
 #navbarNav{
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 .container-res{
     width: 100%;
@@ -37,4 +43,8 @@ body{
 #calendar{
     width: 40%;
     margin: 1% 2% 0 10%;
+}
+#container-card{
+    margin: 0 auto;
+    width: 80%;
 }

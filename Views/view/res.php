@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function crearCalendario() {
+    console.log("calendario");
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: 'dayGridMonth',

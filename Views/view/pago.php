@@ -29,8 +29,15 @@ if ($name != "" && $email != ""  && $telef != "" && $edad != "" && $fecha != "")
             <input type="hidden" value="<?php echo $edad ?>" name="edad"></input>
             <input type="hidden" value="<?php echo $fecha ?>"name="fecha"> </li>
             <input type="hidden" value= "500" name="costo"></li>
+            <input type="hidden" name="detallesID" id="detallesID">
+            <input type="hidden" name="detallesEm" id="detallesEm">
+            <input type="hidden" name="detallesNo" id="detallesNo">
+            <input type="hidden" name="detallesAp" id="detallesAp">
+            <input type="hidden" name="detallesSt" id="detallesSt">
+            <input type="hidden" name="detallesMo" id="detallesMo">
+            <input type="hidden" name="detallesPa" id="detallesPa">
+            <input type="hidden" name="detallesFe" id="detallesFe">
             <div class="col-md-12" style="margin:0 auto; margin-top:30px; margin-bottom: 100px;" id="metodo"> </div>
-            <button class="btn btn-dark" id="paypal-button" style="display: none;" type="button">Pagar con PayPal</button>
             
     </form>
     </div>
@@ -70,11 +77,31 @@ if ($name != "" && $email != ""  && $telef != "" && $edad != "" && $fecha != "")
 
             onApprove: function(data, actions){
                 actions.order.capture().then(function(detalles){
-                    alert("PAGADO CORRECTAMENTE")
+                    // alert("PAGADO CORRECTAMENTE")
                     pago.value = 'PAY'
+                    itemD = document.getElementById('detallesID')  
+                    itemE = document.getElementById('detallesEm')
+                    itemN = document.getElementById('detallesNo')
+                    itemA = document.getElementById('detallesAp')
+                    itemS = document.getElementById('detallesSt')
+                    itemM = document.getElementById('detallesMo')
+                    itemP = document.getElementById('detallesPa')
+                    itemF = document.getElementById('detallesFe')
+                    itemE.value =detalles['payer']['email_address']
+                    itemD.value = detalles['id'];  
+                    itemN.value = detalles['payer']['name']['given_name'];
+                    itemA.value = detalles['payer']['name']['surname'];
+                    itemS.value = detalles['status'];
+                    itemM.value = detalles['purchase_units']['0']['amount']['currency_code'];
+                    itemP.value = detalles['purchase_units']['0']['amount']['value'];
+                    fecha = detalles['create_time'];
+                    fecha = fecha.slice(0, 10)
+                    itemF.value = fecha
+                    if (itemF.value != '') {
+                        submit = document.getElementById('send-info');
+                        submit.click();
+                    }       
                 });
-                submit =document.getElementById('send-info');
-                submit.click();
             },
 
             onCancel:function (data){

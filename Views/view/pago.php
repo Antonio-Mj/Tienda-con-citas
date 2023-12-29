@@ -44,7 +44,7 @@ if ($name != "" && $email != ""  && $telef != "" && $edad != "" && $fecha != "")
  
 
 
-    <script src="https://www.paypal.com/sdk/js?client-id=AQOoFLv4doU7yn47VeoYtYjWef-M212qPGTIeq-00AN40KyAgskdbRAG7xrALKdiCTiCE4TRj-vItQgo&currency=MXN"></script>
+    <script src=""></script>
 
     
     <?php
